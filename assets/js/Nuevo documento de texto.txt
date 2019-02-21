@@ -1,0 +1,25 @@
+function privilegio(){
+    var html = '<li class="nav-header">Navegación</li>'+
+                '<li class="has-sub active">'+
+                  '<a href="javascript:;">'+
+                    '<b class="caret pull-right"></b>'+
+                    '<i class="fa fa-laptop"></i>'+
+                    '<span>Administración</span>'+
+                  '</a>'+
+                  '<ul class="sub-menu">'+
+                    '<li><a href="perfil.php">Perfil</a></li>'+
+                    '<li><a href="admUsuarios.php">Adm. de Usuarios</a></li>'+
+                    '<li><a href="admSistema.php">Adm. del Sistema</a></li>'+
+                  '</ul>'+
+                '</li>'+
+                '<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>';
+    $(".menu_sismert").prepend(html);
+}
+
+function mensajeUnico(titulo,texto) {
+    $.gritter.add({
+      title: titulo,
+      text: texto
+    });
+    return false
+  };
